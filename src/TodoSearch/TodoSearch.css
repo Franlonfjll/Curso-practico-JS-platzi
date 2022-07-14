@@ -1,0 +1,15 @@
+.todo-search-imput{
+    background-color: #b6b6b6;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: auto;
+    align-content: center;
+    outline: none;
+    padding: 2% 5%;
+    box-shadow: #000 5px 5px 10px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,59 @@
+.todo-item-container{
+    background-color: #bebebe;
+    margin: 1.3em auto;
+    width: 30em;
+    font-size: 2em;
+    border-radius: 1em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    box-shadow: black 5px 5px 10px;
+}
+
+.scale-up-center:hover {
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-center {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+}
+
+.todo-item-p-completed{
+  text-decoration: line-through;
+}
+
+.check-item1{
+    margin: auto 10px;
+}
+
+.check-item2{
+    margin: auto 10px;
+}
+
+.check-item1{
+  font-size: 3em;
+}
+
+.check-item1:hover{
+  color: #12610b;
+}
+
+.check-item1-active{
+  color: #4caf50
+}
+
+.check-item2{
+  font-size: 3em;
+}
+
+.check-item2:hover{
+  color: #960000;
+}
