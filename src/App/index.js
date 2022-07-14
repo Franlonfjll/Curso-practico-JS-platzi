@@ -8,36 +8,46 @@ import { AppUI } from './AppUI';
 // ];
 
 function useLocalStorage(itemName, initailValue) {
+  const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
   const [item, setItem] = React.useState(initailValue);
 
   React.useEffect(() => {
     setTimeout(() => {
-      const localStorageItem = localStorage.getItem(itemName);
-      let parsedItem;
-      
-      if (!localStorageItem) {
-        localStorage.setItem(itemName, JSON.stringify(initailValue));
-        parsedItem = initailValue;
-      } else {
-        parsedItem = JSON.parse(localStorageItem);
+      try {
+        const localStorageItem = localStorage.getItem(itemName);
+        let parsedItem;
+        
+        if (!localStorageItem) {
+          localStorage.setItem(itemName, JSON.stringify(initailValue));
+          parsedItem = initailValue;
+        } else {
+          parsedItem = JSON.parse(localStorageItem);
+        }
+  
+        setItem(parsedItem);
+        setLoading(false);
+      } catch(error) {
+        setError(error)
       }
-
-      setItem(parsedItem);
-      setLoading(false);
     }, 1000)
   });
 
   const saveItem = (newTodos) => {
-    const stringifiedTodo = JSON.stringify(newTodos);
+    try {
+      const stringifiedTodo = JSON.stringify(newTodos);
     localStorage.setItem(itemName, stringifiedTodo);
     setItem(newTodos);
+    } catch(error) {
+      setError(error);
+    }
   };
 
   return {
     item,
     saveItem,
     loading,
+    error,
   };
 };
 
@@ -46,6 +56,7 @@ function App () {
     item: todos,
     saveItem: saveTodos,
     loading,
+    error,
   } = useLocalStorage('TODOS_1', []);
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -83,6 +94,7 @@ function App () {
     return (
       <AppUI
         loading={loading}
+        error={error}
         totalTodos={totalTodos}
         completedTodos={completedTodos}
         searchValue={searchValue}
