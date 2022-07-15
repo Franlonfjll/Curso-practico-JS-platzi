@@ -2,8 +2,8 @@ import React from "react";
 import './CreateTodoButton.css';
 
 function CreateTodoButton(props) {
-    const onClickButton = (msg) => {
-        alert(msg);
+    const onClickButton = () => {
+        props.setOpenModal(prevState => !prevState)
     }
 
     return (
@@ -11,7 +11,7 @@ function CreateTodoButton(props) {
             <div className="flex-items">
                 <button 
                 className="button-create scale-up-center-bt"
-                onClick={() => onClickButton('Aquí se debería abrir un modal')} >+</button>
+                onClick={onClickButton} >+</button>
             </div>            
         </div>
     );
