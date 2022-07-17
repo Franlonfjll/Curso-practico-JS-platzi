@@ -57,3 +57,39 @@
 .check-item2:hover{
   color: #960000;
 }
+
+@media (max-width: 768px) {
+  .todo-item-container{
+    width: 20em;
+  }
+  .check-item1{
+    font-size: 2.5em;
+  }
+  .check-item2{
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 425px) {
+  .todo-item-container{
+    width: 19em;
+  }
+  .check-item1{
+    font-size: 2.3em;
+  }
+  .check-item2{
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 375px) {
+  .todo-item-container{
+    width: 16.5em;
+  }
+  .check-item1{
+    font-size: 2.3em;
+  }
+  .check-item2{
+    font-size: 2.3em;
+  }
+}

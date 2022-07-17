@@ -6,9 +6,39 @@ body {
 }
 
 #root{
-  margin: 10em 30em;
+  width: 80em;
+  margin: 16em 24em 0 24em;
   padding: 2em 2em;
   border-style: solid;
   border-radius: 2em;
   background-color: rgb(17, 16, 95);
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  #root {
+    width: 60em;
+    margin: 16em 19em 0 19em;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    width: 40em;
+    margin: 10em 16em 0 16em;
+  }
+}
+
+@media (max-width: 720px) {
+  #root {
+    width: 40em;
+    margin: 10em 14em 0 14em;
+  }
+}
+
+@media (max-width: 425px) {
+  #root {
+    width: auto;
+    margin: 4em 0 0 0;
+  }
 }

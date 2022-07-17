@@ -1,0 +1,44 @@
+.container-form{
+    border: 1px black solid;
+    border-radius: 20px;
+    background-color: #474747af;
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+}
+
+.title-form{
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+.textarea-form{
+    border: 2px black solid;
+    font-size: 1em;
+    width: 450px;
+    height: 1.2em;
+    margin-bottom: 1em;
+}
+
+.container-button-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.button-cancel{
+    border-radius: 80px;
+    border-style: none;
+    background-color: #a1a1a1;
+    height: 50px;
+}
+
+.button-add{
+    border-radius: 80px;
+    border-style: none;
+    background-color: #a1a1a1;
+    height: 50px;
+}

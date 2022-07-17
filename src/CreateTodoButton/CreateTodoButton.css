@@ -43,3 +43,7 @@
       transform: scale(1.5);
     }
 }
+
+@media (max-width: 425px) {
+    
+  }
