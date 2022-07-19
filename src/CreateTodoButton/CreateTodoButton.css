@@ -14,7 +14,6 @@
     flex-basis: auto;
     align-self: auto;
     order: 0;
-    z-index: 1;
 }
 
 .button-create{

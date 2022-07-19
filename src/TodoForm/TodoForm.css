@@ -3,7 +3,7 @@
     border-radius: 20px;
     background-color: #474747af;
     width: 500px;
-    height: 400px;
+    height: 250px;
     padding: 30px;
 }
 
@@ -14,10 +14,10 @@
 
 .textarea-form{
     border: 2px black solid;
-    font-size: 1em;
+    font-size: 0.8em;
     width: 450px;
     height: 1.2em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .container-button-form{
@@ -41,4 +41,27 @@
     border-style: none;
     background-color: #a1a1a1;
     height: 50px;
+}
+
+@media (max-width: 425px) {
+    .container-form {
+        width: 300px;
+    }
+    .title-form{
+        font-size: 1em;
+    }
+    .textarea-form{
+        width: 250px;
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 375px) {
+    .container-form {
+        width: 280px;
+    }
+    .textarea-form{
+        width: 250px;
+        font-size: 0.5em;
+    }
 }
